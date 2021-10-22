@@ -1,15 +1,15 @@
 {
-"builders": [
+  "builders": [
     {
       "ami_name": "ion-packer-{{timestamp}}",
       "instance_type": "t2.micro",
-      "region":"us-east-2",
+      "region": "us-east-2",
       "source_ami": "ami-00399ec92321828f5",
       "ssh_username": "ubuntu",
       "type": "amazon-ebs"
     }
   ],
-"provisioners": [
+  "provisioners": [
     {
       "type": "shell",
       "script": "./build-customAMI.sh"
